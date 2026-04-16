@@ -1,0 +1,159 @@
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* サイトタイトル（h1）の色をテーマピンクに変更 */
+.site-title {
+  text-align: center;
+  color: #e4007e; /* 主役のピンク色。'ここを書き換えてください' (別のピンクにする場合など) */
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* 追加：サイトの説明文のスタイル */
+.site-description {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 追加：検索窓が選択された時の枠線をピンクに */
+#searchInput:focus {
+  outline: 2px solid #e4007e; /* 'ここを書き換えてください' */
+  border-color: transparent;
+}
+
+#searchButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e4007e; /* 検索ボタンの色。'ここを書き換えてください' */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #c0006a; /* ホバー時の少し濃いピンク。'ここを書き換えてください' */
+}
+
+.qa-card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* 追加：カードをホバーした時に薄いピンクにする */
+.qa-card:hover {
+  background-color: #fff0f6; /* 'ここを書き換えてください' */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.qa-header {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.qa-question {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #e4007e; /* 質問の色をピンクに。'ここを書き換えてください' */
+}
+
+.qa-answer {
+  color: #666;
+}
+
+/* 浮かぶプレイヤーのデザイン */
+.floating-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* 追加：プレイヤーのヘッダーもピンクに */
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e4007e; /* 'ここを書き換えてください' */
+  color: white;
+  padding: 8px 10px;
+  cursor: grab;
+  user-select: none;
+}
+
+.player-header:active {
+  cursor: grabbing;
+}
+
+.drag-handle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#closePlayer {
+  background: white; /* 閉じるボタンの背景を白に */
+  color: #e4007e; /* 閉じるボタンの文字色をピンクに。'ここを書き換えてください' */
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#closePlayer:hover {
+  background: #f0f0f0;
+}
+
+.iframe-container {
+  width: 100%;
+  height: 180px;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+}
