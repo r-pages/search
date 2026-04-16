@@ -64,15 +64,17 @@ body {
   margin-bottom: 8px;
 }
 
-/* 検索エリア：角を丸く、柔らかい影 */
+/* 検索エリア：白い角丸ボックスの中に収めるデザインに変更 */
 .search-area {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 0; /* ボックス内は隙間をなくす */
   margin-bottom: 40px;
-  background-color: white;
-  padding: 10px;
+  background-color: white; /* 全体は白 */
+  padding: 5px; /* 内部の余白 */
   border-radius: 40px; /* 角を完全に丸く */
   box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* 柔らかい影 */
+  border: 1px solid #eee; /* 薄いボーダー */
 }
 
 #searchInput {
@@ -80,14 +82,12 @@ body {
   padding: 15px 25px;
   font-size: 17px;
   border: none; /* ボーダーをなくす */
-  background-color: #f8f8f8; /* 検索窓の背景 */
-  border-radius: 30px; /* 角を丸く */
+  background-color: transparent; /* 背景を透明に */
   color: #444;
 }
 
 #searchInput:focus {
-  outline: 2px solid #e4007e;
-  background-color: white;
+  outline: none; /* 選択時の青枠をなくす */
 }
 
 /* 検索ボタン：角を丸く、アイコン付き */
@@ -104,6 +104,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s, transform 0.1s;
+  margin-left: 10px; /* 入力欄との間隔 */
 }
 
 #searchButton:hover {
