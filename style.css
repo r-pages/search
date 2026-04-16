@@ -1,118 +1,127 @@
 /* 全体設定：モダンなフォントと柔らかな背景色 */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
-  background-color: #fbfbfb;
+  background-color: #fcfcfc; /* より白に近いクリーンな背景 */
   color: #444;
   margin: 0;
-  padding: 40px 20px;
+  padding: 50px 20px; /* 上の余白を少し増やしてゆったりと */
   line-height: 1.6;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 800px; /* 少しスマートな幅に */
   margin: 0 auto;
 }
 
-/* サイトタイトル：文字と肉球画像を並べる */
+/* タイトル：文字と肉球画像を並べる */
 .site-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px; /* 文字と肉球の間隔 */
+  gap: 8px; /* 肉球との距離を少し近づける */
   text-align: center;
   color: #e4007e;
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 46px; /* 少し大きくして主役感を出す */
+  margin-top: 0;
+  margin-bottom: 5px; /* サブタイトルとの距離を詰める */
   font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
-/* ★修正：肉球画像をきれいに配置する設定 */
+/* ★魔法のコード：肉球の白い背景を透明化して馴染ませる */
 .paw-icon {
-  width: 40px; /* 画像の幅を固定 */
-  height: auto; /* 高さは自動調整 */
-  margin-top: 5px; /* 文字の高さに合わせる調整 */
-  flex-shrink: 0; /* ★重要：スマホなど狭い画面でも潰れないようにする */
+  width: 38px; 
+  height: auto; 
+  margin-top: 8px; 
+  flex-shrink: 0;
+  mix-blend-mode: multiply; /* 白い部分を透明にする魔法 */
 }
 
-/* 追加：サブタイトルのデザイン */
-/* サブタイトルのデザイン（中央寄せを強化） */
+/* サブタイトル：洗練された小さな文字で中央に */
 .site-subtitle {
-  display: block;      /* ブロックとして扱う */
-  width: 100%;         /* 横幅をいっぱいまで広げる */
-  text-align: center;  /* 文字を中央に寄せる */
-  color: #666;         /* 落ち着いたグレー */
-  font-size: 15px;
-  font-weight: 600;
-  margin-top: -10px;   /* タイトルとの隙間を詰める */
-  margin-bottom: 25px; /* 下の説明文との間隔 */
-  letter-spacing: 0.05em; /* 文字の間隔を少し広げて美しく */
+  display: block;
+  text-align: center;
+  color: #888; /* 薄めのグレーで上品に */
+  font-size: 13px; /* 小さくして洗練さを演出 */
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 40px; /* 下の説明文としっかり余白を取る */
+  letter-spacing: 0.1em; /* 字間を広げてモダンに */
 }
 
-/* 説明文エリア：美しいカプセルデザイン */
+/* 説明文エリア：枠線を消し、うっすらピンクの影で浮遊感を */
 .site-description-wrapper {
-  background-color: #fff0f6;
-  border: 1px solid #ffccdf;
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(228, 0, 126, 0.03); /* ピンクを混ぜた薄い影 */
+  background-color: #fff7fa; /* 極めて薄いピンク */
+  border: none; /* ★枠線をあえて無くしてミニマルに */
+  border-radius: 20px; /* 丸みを少し強める */
+  padding: 35px 25px; /* 内側の余白を広げる */
+  margin-bottom: 50px;
+  box-shadow: 0 8px 24px rgba(228, 0, 126, 0.04); /* ピンク色のベールのような薄い影 */
 }
 
 .site-description {
-  color: #666;
-  font-size: 17px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #555;
+  font-size: 15px; /* 少し小さくして上品に */
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
+  line-height: 1.8; /* 行間を広げて読みやすく */
 }
 
 .description-points {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0 0;
-  font-size: 15px;
+  margin: 25px 0 0 0;
+  font-size: 14px; /* 箇条書きはさらに少し小さく */
+  color: #777;
   display: inline-block;
   text-align: left;
 }
 
 .description-points li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-/* 検索エリア：完璧なカプセルデザインを維持（image_10の形式） */
+/* 検索エリア：シャドウをピンクがからせて統一感を出す */
 .search-area {
   display: flex;
   align-items: center;
   background-color: white;
   border-radius: 40px;
-  padding: 6px; /* 外枠と内枠の隙間 */
-  margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  border: 1px solid #eee;
+  padding: 6px; 
+  margin-bottom: 50px;
+  box-shadow: 0 8px 30px rgba(228, 0, 126, 0.08); /* ピンクがかった美しい影 */
+  border: none; /* ボーダーをなくして影だけで見せる */
 }
 
-/* 検索窓：枠を壊さない設定 */
 #searchInput {
   flex-grow: 1;
-  padding: 12px 20px;
+  padding: 15px 20px;
   font-size: 16px;
   border: none;
   background-color: transparent;
   color: #444;
-  min-width: 0; /* 文字が多くても枠を壊さない */
+  min-width: 0; 
   outline: none;
 }
 
-/* 検索ボタン：絶対に潰れず、完璧に収まるように設定 */
+#searchInput::placeholder {
+  color: #bbb; /* プレースホルダーの色を薄く */
+}
+
 #searchButton {
-  flex-shrink: 0; /* ボタンが潰れるのを防ぐ */
+  flex-shrink: 0; 
   display: flex;
   align-items: center;
-  justify-content: center; /* 内部のアイコンとテキストを完全にセンターへ */
+  justify-content: center; 
   gap: 8px;
-  padding: 12px 24px;
+  padding: 14px 28px; /* ボタンを少しふっくらさせる */
   font-size: 16px;
   background-color: #e4007e;
   color: white;
@@ -120,7 +129,7 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  white-space: nowrap; /* 文字が2行になるのを防ぐ */
+  white-space: nowrap; 
   margin: 0;
   transition: background-color 0.2s, transform 0.1s;
 }
@@ -133,19 +142,20 @@ body {
   transform: translateY(1px);
 }
 
+/* 検索結果のカードデザイン（変更なし） */
 .qa-card {
   background-color: white;
   padding: 25px;
   margin-bottom: 20px;
   border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .qa-card:hover {
   background-color: #fff0f6;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 25px rgba(228, 0, 126, 0.08);
   transform: translateY(-2px);
 }
 
@@ -153,24 +163,25 @@ body {
   font-weight: 700;
   color: #888;
   margin-bottom: 15px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f9f9f9;
   padding-bottom: 8px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .qa-question {
   font-weight: 800;
   margin-bottom: 10px;
   color: #e4007e;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .qa-answer {
-  color: #666;
-  font-size: 16px;
+  color: #555;
+  font-size: 15px;
   line-height: 1.7;
 }
 
+/* 浮かぶプレイヤー（変更なし） */
 .floating-player {
   position: fixed;
   bottom: 30px;
