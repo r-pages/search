@@ -151,3 +151,27 @@ document.addEventListener('mouseup', endDrag);
 playerHeader.addEventListener('touchstart', startDrag, {passive: false});
 document.addEventListener('touchmove', drag, {passive: false});
 document.addEventListener('touchend', endDrag);
+
+// ==========================================
+// ▼▼ 追加：トップへ戻るボタンの機能 ▼▼
+// ==========================================
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// 画面がスクロールされたときの処理
+window.addEventListener('scroll', () => {
+  // 上から300px以上スクロールされたらボタンを表示
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+// ボタンがクリックされたときの処理
+scrollToTopBtn.addEventListener('click', () => {
+  // 画面の一番上へ、滑らかに（smooth）移動する
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
