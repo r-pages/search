@@ -281,3 +281,14 @@ body {
 .scroll-to-top:active {
   transform: translateY(0);
 }
+
+/* ==========================================
+   追加：検索キーワードのピンクマーカー
+========================================== */
+mark {
+  background: linear-gradient(transparent 50%, #ffcbe6 50%); /* 下半分だけピンクにする魔法 */
+  color: inherit; /* 文字色はそのまま */
+  font-weight: bold; /* マーカー部分は少し太字にして目立たせる */
+  padding: 0 2px;
+}
+
